@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+
+html {
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgb(161, 151, 151);
+  box-shadow: 10px 5px 5px rgb(161, 151, 151);
+}
+
+.ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+.logo {
+  margin: 16px 32px;
+}
+
+.logo-anchor-tag {
+  font-family: "Dancing Script", cursive;
+  font-size: 2rem;
+  color: rgb(230, 120, 138);
+}
+
+li {
+  margin: 16px 32px;
+  font-family: "Open Sans", sans-serif;
+  list-style: none;
+}
+
+.home {
+  color: rgb(230, 120, 138);
+}
+
+.main-page {
+  margin-top: 16px;
+}
+
+.grid {
+  display: grid;
+  grid-template-areas:
+    "paragraph paragraph"
+    "button button"
+    "coach communication";
+}
+
+.button {
+  grid-area: button;
+  height: 38px;
+  width: 127px;
+  border-radius: 20px;
+  background-color: lightcoral;
+  border: none;
+  color: white;
+  font-family: "Roboto", sans-serif;
+}
+
+.zdj-grid {
+  display: flex;
+  justify-content: space-around;
+  margin: 0 65px;
+}
+
+.paragraph {
+  margin-top: 32px;
+  color: rgb(202, 211, 77);
+  grid-area: paragraph;
+  height: 20px;
+  margin-bottom: 108px;
+}
+
+.coach {
+  grid-area: coach;
+  margin-right: 41px;
+  background-color:lightsteelblue;
+  padding:20px;
+}
+
+.communication {
+  grid-area: communication;
+  background-color:lightskyblue;
+  padding:20px;
+  margin-left:-41px;
+}
+
+.h3 {
+  font-size: 1rem;
+}
+
+.coach-communication {
+    display:flex;
+    font-family: 'Rubik', sans-serif;
+    color:rgb(73, 67, 67);
+}
