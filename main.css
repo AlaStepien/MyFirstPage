@@ -2,6 +2,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500;700&display=swap');
 
 html {
   margin: 0;
@@ -25,6 +27,7 @@ body {
   margin: 0;
   padding: 0;
 }
+
 .logo {
   margin: 16px 32px;
 }
@@ -41,8 +44,32 @@ li {
   list-style: none;
 }
 
+.about:hover,
+.about:active {
+  cursor:pointer;
+  color:rgb(230, 120, 138);
+}
+
+.services:hover,
+.services:active {
+  cursor:pointer;
+  color:rgb(230, 120, 138);
+}
+
+.contact:hover,
+.contact:active {
+  cursor:pointer;
+  color:rgb(230, 120, 138);
+}
+
 .home {
   color: rgb(230, 120, 138);
+}
+
+.home:hover,
+.home:active {
+  color:black;
+  cursor:pointer;
 }
 
 .main-page {
@@ -66,6 +93,13 @@ li {
   border: none;
   color: white;
   font-family: "Roboto", sans-serif;
+}
+
+.button:hover,
+.button:active {
+  height:45px;
+  width:140px;
+  transition-duration:0.5s;
 }
 
 .zdj-grid {
@@ -104,4 +138,75 @@ li {
     display:flex;
     font-family: 'Rubik', sans-serif;
     color:rgb(73, 67, 67);
+}
+
+.topolska {
+  display:flex;
+  margin:20px 55px;
+}
+
+.wyzwanie {
+  padding:15px;
+  background-color:rgba(175, 25, 83, 0.575);
+  width:57%;
+  height: 272px;
+}
+
+.pobierz {
+  font-family: 'Poppins', sans-serif;
+  font-size:20px;
+  color:white;
+}
+
+.signup {
+  font-family: 'Poppins', sans-serif;
+  font-size:15px;
+  margin-bottom:33px;
+  color:white;
+}
+
+#email {
+  padding:8px;
+  border:0.5px solid gray;
+}
+
+#fname {
+  padding:8px;
+  border:0.5px solid gray;
+}
+
+#submit {
+  padding:10px 65px;
+  border:0.5px solid gray;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight:700;
+  letter-spacing: 3px;
+
+}
+.flex {
+  display:flex;
+  align-items:center;
+}
+
+.checkbox-form {
+  margin-bottom:16px;
+}
+
+#checkbox {
+  width:16px;
+  height:16px;
+  border:1px solid rgb(177, 177, 238);
+}
+.div-consent {
+  width:100%;
+  margin-left:8px;
+}
+
+.consent {
+  width:90%;
+  color:white;
+}
+
+.img {
+  z-index:2;
 }
