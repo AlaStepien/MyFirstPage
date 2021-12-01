@@ -1,17 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500;700&display=swap");
 
 html {
   margin: 0;
+  width: 100%;
 }
 
 body {
   margin: 0;
   box-sizing: border-box;
+  width: 100%;
 }
 
 .navbar {
@@ -19,7 +21,9 @@ body {
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid rgb(161, 151, 151);
-  box-shadow: 10px 5px 5px rgb(161, 151, 151);
+  box-shadow: 0px 5px 5px rgb(161, 151, 151);
+  width: 100%;
+  min-height: 50px;
 }
 
 .ul {
@@ -29,13 +33,18 @@ body {
 }
 
 .logo {
-  margin: 16px 32px;
+  margin: 16px 7px;
+}
+
+.mobile-logo {
+  display: none;
 }
 
 .logo-anchor-tag {
   font-family: "Dancing Script", cursive;
   font-size: 2rem;
   color: rgb(230, 120, 138);
+  white-space: nowrap;
 }
 
 li {
@@ -46,20 +55,20 @@ li {
 
 .about:hover,
 .about:active {
-  cursor:pointer;
-  color:rgb(230, 120, 138);
+  cursor: pointer;
+  color: rgb(230, 120, 138);
 }
 
 .services:hover,
 .services:active {
-  cursor:pointer;
-  color:rgb(230, 120, 138);
+  cursor: pointer;
+  color: rgb(230, 120, 138);
 }
 
 .contact:hover,
 .contact:active {
-  cursor:pointer;
-  color:rgb(230, 120, 138);
+  cursor: pointer;
+  color: rgb(230, 120, 138);
 }
 
 .home {
@@ -68,12 +77,8 @@ li {
 
 .home:hover,
 .home:active {
-  color:black;
-  cursor:pointer;
-}
-
-.main-page {
-  margin-top: 16px;
+  color: black;
+  cursor: pointer;
 }
 
 .grid {
@@ -93,41 +98,48 @@ li {
   border: none;
   color: white;
   font-family: "Roboto", sans-serif;
+  margin-bottom: 80px;
 }
 
 .button:hover,
 .button:active {
-  height:45px;
-  width:140px;
-  transition-duration:0.5s;
+  height: 45px;
+  width: 140px;
+  transition-duration: 0.5s;
 }
 
 .zdj-grid {
   display: flex;
-  justify-content: space-around;
-  margin: 0 65px;
+  justify-content: space-between;
+  margin: 20px 100px;
+  background: url(images/zdjęcie.JPG);
+  background-repeat: no-repeat;
 }
 
 .paragraph {
   margin-top: 32px;
-  color: rgb(202, 211, 77);
+  color: rgb(104, 104, 104);
   grid-area: paragraph;
   height: 20px;
-  margin-bottom: 108px;
+  margin-bottom: 180px;
+}
+
+.paragraph-mobile {
+  display: none;
 }
 
 .coach {
   grid-area: coach;
   margin-right: 41px;
-  background-color:lightsteelblue;
-  padding:20px;
+  background-color: lightsteelblue;
+  padding: 20px;
 }
 
 .communication {
   grid-area: communication;
-  background-color:lightskyblue;
-  padding:20px;
-  margin-left:-41px;
+  background-color: lightskyblue;
+  padding: 20px;
+  margin-left: -41px;
 }
 
 .h3 {
@@ -135,78 +147,221 @@ li {
 }
 
 .coach-communication {
-    display:flex;
-    font-family: 'Rubik', sans-serif;
-    color:rgb(73, 67, 67);
+  display: flex;
+  font-family: "Rubik", sans-serif;
+  color: rgb(73, 67, 67);
 }
 
 .topolska {
-  display:flex;
-  margin:20px 55px;
+  display: flex;
+  margin: 0px 55px;
 }
 
 .wyzwanie {
-  padding:15px;
-  background-color:rgba(175, 25, 83, 0.575);
-  width:57%;
+  padding: 15px;
+  background-color: rgba(175, 25, 83, 0.575);
+  width: 57%;
   height: 272px;
 }
 
 .pobierz {
-  font-family: 'Poppins', sans-serif;
-  font-size:20px;
-  color:white;
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  color: white;
 }
 
 .signup {
-  font-family: 'Poppins', sans-serif;
-  font-size:15px;
-  margin-bottom:33px;
-  color:white;
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  margin-bottom: 33px;
+  color: white;
 }
 
 #email {
-  padding:8px;
-  border:0.5px solid gray;
+  padding: 8px;
+  border: 0.5px solid gray;
 }
 
 #fname {
-  padding:8px;
-  border:0.5px solid gray;
+  padding: 8px;
+  border: 0.5px solid gray;
 }
 
 #submit {
-  padding:10px 65px;
-  border:0.5px solid gray;
-  font-family: 'Josefin Sans', sans-serif;
-  font-weight:700;
+  padding: 10px 65px;
+  border: 0.5px solid gray;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 700;
   letter-spacing: 3px;
-
 }
 .flex {
-  display:flex;
-  align-items:center;
+  display: flex;
+  align-items: center;
 }
 
 .checkbox-form {
-  margin-bottom:16px;
+  margin-bottom: 16px;
 }
 
 #checkbox {
-  width:16px;
-  height:16px;
-  border:1px solid rgb(177, 177, 238);
+  width: 16px;
+  height: 16px;
+  border: 1px solid rgb(177, 177, 238);
 }
 .div-consent {
-  width:100%;
-  margin-left:8px;
+  width: 100%;
+  margin-left: 8px;
 }
 
 .consent {
-  width:90%;
-  color:white;
+  width: 90%;
+  color: white;
 }
 
-.img {
-  z-index:2;
+.hamburger-item {
+  display: none;
+}
+
+.footer {
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  padding:12px;
+  width:100%;
+  background-color:burlywood;
+}
+
+footer li {
+  display:flex;
+  font-weight:700;
+}
+
+
+
+@media (max-width: 750px) {
+  .mobile-logo {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5px 36px;
+  }
+
+  .navbar {
+    width: 100%;
+  }
+
+  .hamburger-item {
+    display: inline-block;
+    width: 20px;
+    height: 3px;
+    background-color: pink;
+    margin: 2px 0;
+  }
+
+  .buttons {
+    display: none;
+  }
+
+  .logo {
+    display: flex;
+  }
+
+  .logo-anchor-tag {
+    font-size: 1.3rem;
+  }
+
+  .zdj-grid {
+    background-size: contain;
+    justify-content: center;
+    margin: 20px 50px;
+  }
+
+  .paragraph {
+    display: flex;
+    margin-top: 177px;
+    margin-bottom:136px;
+    margin-left:23px;
+    color: rgb(104, 104, 104);
+    font-size: small;
+  }
+
+  .grid {
+    display: flex;
+    flex-direction: column;
+    margin-top: 200px;
+  }
+
+  .button {
+    margin:30px auto;
+  }
+
+  .coach-communication {
+    flex-direction: column;
+    width: 360px;
+    margin-top:18px;
+    display:flex;
+    align-items:center;
+  }
+
+  .coach {
+    width: 360px;
+    text-align: center;
+    padding: 0;
+    margin-right: 0;
+  }
+
+  .communication {
+    width: 360px;
+    text-align: center;
+    margin-left: 0;
+    padding: 0;
+    margin-right: 0;
+  }
+
+  .topolska {
+    display:flex;
+    flex-direction: column;
+    margin:0;
+    align-items:center;
+  }
+
+  .wyzwanie {
+    width: 277px;
+    margin-left:30px;
+    padding-bottom:66px;
+  }
+
+  .pobierz {
+    margin-top: 8px;
+    font-size: smaller;
+  }
+
+  #email {
+    margin-bottom:10px;
+  }
+  
+  #fname {
+    margin-bottom:10px;
+  }
+
+  .consent {
+    color:black;
+    margin-top:67px;
+  }
+
+  #checkbox {
+margin-bottom:10px;
+  }
+
+  .consent {
+    font-family: "Poppins", sans-serif;
+    font-size:small;
+  }
+
+  .img {
+    display:none;
+  }
+
+  .main-page {
+    max-height:400px;
+  }
 }
