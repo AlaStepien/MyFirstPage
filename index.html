@@ -31,6 +31,30 @@
           <li class="contact">Contact</li>
         </ul>
       </div>
+      <div class="dropdown">
+        <input type="text" class="textBox" placeholder="Dropdown Menu" readonly>
+        <div class="option">
+          <div onclick="show('Html')"><ion-icon name="logo-html5"></ion-icon>
+            Html</div>
+          <div onclick="show('Css')"><ion-icon name="logo-css3"></ion-icon>
+            CSS</div>
+          <div onclick="show('JavaScript')"><ion-icon name="logo-nodejs"></ion-icon>JavaScript</div>
+          <div onclick="show('Figma')"><ion-icon name="logo-figma"></ion-icon>Figma</div>
+          <div onclick="show('ReactJs')"><ion-icon name="logo-react"></ion-icon>ReactJs</div>
+        </div>
+      </div>
+      <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<script>
+  function show(anything) {
+    document.querySelector('.textBox').value = anything;
+  }
+
+  let dropdown = document.querySelector('.dropdown');
+  dropdown.onclick = function() {
+    dropdown.classList.toggle('active');
+  }
+</script>
     </div>
     <div class="mobile-view">
     <div class="zdj-grid">
@@ -101,7 +125,22 @@
     <div class="image2"></div>
     <div class="image3"></div>
     </div>
+  
+  <div class="opisy">
+    <div class="eps">
+    <div class="mansalva learn">Learn with Me!</div>
+    <div class="podpis">We can learn together to achieve the results you alweays wanted.</div>
+    </div>
+    <div class="eps">
+<div class="mansalva">Shop</div>
+<div class="podpis">Shop the materials that will help you and guide you through the processs of becoming the best version of yourself</div>
+</div>
+<div class="eps">
+<div class="mansalva blog">blog</div>
+<div class="podpis">In the blog I can show you how I plan my day and achieve the best results.</div>
+</div>
   </div>
+</div>
   <footer>
   <ul class="footer">
     <li>Contact</li>

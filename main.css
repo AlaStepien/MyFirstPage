@@ -1,37 +1,46 @@
-@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Mansalva&display=swap');
+
+* {
+  box-sizing: border-box;
+}
 
 html {
   margin: 0;
   width: 100%;
-  height:100%;
+  height: 100%;
 }
 
 body {
   margin: 0;
-  box-sizing: border-box;
   width: 100%;
+  margin-top: 82px;
 }
 
 .navbar {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
   border-bottom: 1px solid rgb(161, 151, 151);
   box-shadow: 0px 5px 5px rgb(161, 151, 151);
   width: 100%;
   min-height: 50px;
+  position: fixed;
+  z-index: 2;
+  background-color: white;
+  top: 0;
 }
 
 .ul {
   display: flex;
-  margin: 0;
+  margin: 0 342px;;
   padding: 0;
+  margin-right: 71px;
 }
 
 .logo {
@@ -43,16 +52,24 @@ body {
 }
 
 .logo-anchor-tag {
-  font-family: "Dancing Script", cursive;
+  font-family: 'Dancing Script', cursive;
   font-size: 2rem;
   color: rgb(230, 120, 138);
   white-space: nowrap;
+  margin-left: 15px;
+  position: absolute;
+  top: 6px;
+  left: 12px;
 }
 
 li {
-  margin: 16px 32px;
-  font-family: "Open Sans", sans-serif;
+  margin: 16px 11px;
+  font-family: 'Open Sans', sans-serif;
   list-style: none;
+}
+
+.about {
+  width: 74px;
 }
 
 .about:hover,
@@ -61,10 +78,18 @@ li {
   color: rgb(230, 120, 138);
 }
 
+.services {
+  width: 88px;
+}
+
 .services:hover,
 .services:active {
   cursor: pointer;
   color: rgb(230, 120, 138);
+}
+
+.contact {
+  width: 85px;
 }
 
 .contact:hover,
@@ -75,6 +100,7 @@ li {
 
 .home {
   color: rgb(230, 120, 138);
+  width: 74px;
 }
 
 .home:hover,
@@ -83,12 +109,82 @@ li {
   cursor: pointer;
 }
 
+.dropdown {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  position: absolute;
+  right: 7px;
+  top: 8px;
+}
+
+.dropdown::before {
+  content: '';
+  position: absolute;
+  right: 20px;
+  top: 15px;
+  z-index: 100000;
+  width: 8px;
+  height: 8px;
+  border: 2px solid #333;
+  border-top: 2px solid #fff;
+  border-right: 2px solid #fff;
+  transform: rotate(-45deg);
+  transition: 0.5s;
+  pointer-events: none;
+}
+
+.dropdown.active::before {
+  top: 22px;
+  transform: rotate(-225deg);
+}
+.dropdown input {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  background: #fff;
+  border: none;
+  outline: none;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  padding: 12px 20px;
+  border-radius: 10px;
+}
+
+.dropdown .option {
+  background: #fff;
+  box-shadow: 0 30px 30px rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+  overflow: hidden;
+  display: none;
+}
+
+.dropdown.active .option {
+  display: block;
+}
+
+.dropdown .option div {
+  padding: 12px 20px;
+  cursor: pointer;
+}
+
+.dropdown .option div:hover {
+  background: #62baea;
+  color: #fff;
+}
+
+.dropdown .option div ion-icon {
+  position: relative;
+  top: 4px;
+  font-size: 1.2em;
+}
+
 .grid {
   display: grid;
   grid-template-areas:
-    "paragraph paragraph"
-    "button button"
-    "coach communication";
+    'paragraph paragraph'
+    'button button'
+    'coach communication';
 }
 
 .button {
@@ -99,7 +195,7 @@ li {
   background-color: lightcoral;
   border: none;
   color: white;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   margin-bottom: 80px;
 }
 
@@ -150,8 +246,9 @@ li {
 
 .coach-communication {
   display: flex;
-  font-family: "Rubik", sans-serif;
+  font-family: 'Rubik', sans-serif;
   color: rgb(73, 67, 67);
+  margin-right: 36px;
 }
 
 .topolska {
@@ -163,17 +260,17 @@ li {
   padding: 15px;
   background-color: rgba(175, 25, 83, 0.575);
   width: 57%;
-  height: 272px;
+  height: 302px;
 }
 
 .pobierz {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 20px;
   color: white;
 }
 
 .signup {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 15px;
   margin-bottom: 33px;
   color: white;
@@ -192,7 +289,7 @@ li {
 #submit {
   padding: 10px 65px;
   border: 0.5px solid gray;
-  font-family: "Josefin Sans", sans-serif;
+  font-family: 'Josefin Sans', sans-serif;
   font-weight: 700;
   letter-spacing: 3px;
 }
@@ -225,79 +322,121 @@ li {
 }
 
 .topolska2 {
-display:flex;
-flex-direction:column;
-align-items:center;
-justify-content:center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .topolska2-obramowanie {
-  padding:20px;
-  background-color:rgb(190, 165, 165);
-  margin:30px 0;
+  padding: 20px;
+  background-color: rgb(190, 165, 165);
+  margin: 30px 0;
 }
 .find-more {
-  margin-top:40px;
+  margin-top: 40px;
   font-family: 'Mansalva', cursive;
-  font-size:50px;
-  color:rgb(65, 61, 61);
+  font-size: 50px;
+  color: rgb(65, 61, 61);
 }
 
 .images {
-  display:flex;
-  flex-direction:row;
-  align-content:space-evenly;
-  justify-content:space-evenly;
-  width:100%;
-  height:50vh;
+  display: flex;
+  flex-direction: row;
+  align-content: space-evenly;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 50vh;
 }
 
 .image1 {
-  display:flex;
-  background-image:url("images/image1.jpg");
-  height:100%;
-  width:20%;
-  background-size:cover;
-  background-position:58% 0;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-  }
+  display: flex;
+  background-image: url('images/image1.jpg');
+  height: 100%;
+  width: 20%;
+  background-size: cover;
+  background-position: 58% 0;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
 
 .image2 {
-  display:flex;
-  background-image:url("images/image2.jpg");
-  height:100%;
-  width:20%;
-  background-size:cover;
-  background-position:center;
-  box-shadow:rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  display: flex;
+  background-image: url('images/image2.jpg');
+  height: 100%;
+  width: 20%;
+  background-size: cover;
+  background-position: center;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
 .image3 {
-  display:flex;
-  background-image:url("images/image3.jpg");
-  height:100%;
-  width:20%;
-  background-size:cover;
-  background-position:70% 0;
-  box-shadow:rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  display: flex;
+  background-image: url('images/image3.jpg');
+  height: 100%;
+  width: 20%;
+  background-size: cover;
+  background-position: 70% 0;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.opisy {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.eps {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 30vw;
+  padding: 35px;
+  vertical-align: bottom;
+}
+
+.mansalva {
+  font-family: 'Mansalva', cursive;
+  font-size: 50px;
+  color: rgb(65, 61, 61);
+  color: white;
+}
+
+.learn {
+  margin-top: -17px;
+  color: white;
+}
+
+.blog {
+  margin-top: -20px;
+  color: white;
+}
+
+.podpis {
+  font-family: 'Rubik', sans-serif;
+  color: rgb(73, 67, 67);
 }
 
 .footer {
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  padding:12px;
-  width:100%;
-  background-color:white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px;
+  width: 100%;
+  background-color: white;
 }
 
 footer li {
-  display:flex;
-  font-weight:700;
-  color:rgb(49, 49, 49);
+  display: flex;
+  font-weight: 700;
+  color: rgb(49, 49, 49);
 }
-
-
 
 @media (max-width: 750px) {
   .mobile-logo {
@@ -339,8 +478,8 @@ footer li {
   .paragraph {
     display: flex;
     margin-top: 177px;
-    margin-bottom:136px;
-    margin-left:23px;
+    margin-bottom: 136px;
+    margin-left: 23px;
     color: rgb(104, 104, 104);
     font-size: small;
   }
@@ -352,15 +491,15 @@ footer li {
   }
 
   .button {
-    margin:30px auto;
+    margin: 30px auto;
   }
 
   .coach-communication {
     flex-direction: column;
     width: 360px;
-    margin-top:18px;
-    display:flex;
-    align-items:center;
+    margin-top: 18px;
+    display: flex;
+    align-items: center;
   }
 
   .coach {
@@ -379,16 +518,16 @@ footer li {
   }
 
   .topolska {
-    display:flex;
+    display: flex;
     flex-direction: column;
-    margin:0;
-    align-items:center;
+    margin: 0;
+    align-items: center;
   }
 
   .wyzwanie {
     width: 277px;
-    margin-left:30px;
-    padding-bottom:66px;
+    margin-left: 30px;
+    padding-bottom: 66px;
   }
 
   .pobierz {
@@ -397,32 +536,32 @@ footer li {
   }
 
   #email {
-    margin-bottom:10px;
+    margin-bottom: 10px;
   }
-  
+
   #fname {
-    margin-bottom:10px;
+    margin-bottom: 10px;
   }
 
   .consent {
-    color:black;
-    margin-top:67px;
+    color: black;
+    margin-top: 67px;
   }
 
   #checkbox {
-margin-bottom:10px;
+    margin-bottom: 10px;
   }
 
   .consent {
-    font-family: "Poppins", sans-serif;
-    font-size:small;
+    font-family: 'Poppins', sans-serif;
+    font-size: small;
   }
 
   .img {
-    display:none;
+    display: none;
   }
 
   .main-page {
-    max-height:400px;
+    max-height: 400px;
   }
 }
