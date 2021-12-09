@@ -1,10 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Mansalva&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap');
 
 * {
   box-sizing: border-box;
@@ -19,7 +14,7 @@ html {
 body {
   margin: 0;
   width: 100%;
-  margin-top: 82px;
+  margin-top: 54px;
 }
 
 .navbar {
@@ -32,13 +27,13 @@ body {
   min-height: 50px;
   position: fixed;
   z-index: 2;
-  background-color: white;
+  background-color:rgb(70, 70, 112);
   top: 0;
 }
 
 .ul {
   display: flex;
-  margin: 0 342px;;
+  margin: 0 342px;
   padding: 0;
   margin-right: 71px;
 }
@@ -54,7 +49,7 @@ body {
 .logo-anchor-tag {
   font-family: 'Dancing Script', cursive;
   font-size: 2rem;
-  color: rgb(230, 120, 138);
+  color: beige;
   white-space: nowrap;
   margin-left: 15px;
   position: absolute;
@@ -66,6 +61,7 @@ li {
   margin: 16px 11px;
   font-family: 'Open Sans', sans-serif;
   list-style: none;
+  color:beige;
 }
 
 .about {
@@ -75,7 +71,7 @@ li {
 .about:hover,
 .about:active {
   cursor: pointer;
-  color: rgb(230, 120, 138);
+  text-decoration:underline;
 }
 
 .services {
@@ -85,7 +81,7 @@ li {
 .services:hover,
 .services:active {
   cursor: pointer;
-  color: rgb(230, 120, 138);
+  text-decoration:underline;
 }
 
 .contact {
@@ -95,17 +91,17 @@ li {
 .contact:hover,
 .contact:active {
   cursor: pointer;
-  color: rgb(230, 120, 138);
+  text-decoration:underline;
 }
 
 .home {
-  color: rgb(230, 120, 138);
+  color: beige;
   width: 74px;
 }
 
 .home:hover,
 .home:active {
-  color: black;
+  text-decoration:underline;
   cursor: pointer;
 }
 
@@ -139,6 +135,7 @@ li {
   top: 22px;
   transform: rotate(-225deg);
 }
+
 .dropdown input {
   width: 100%;
   height: 100%;
@@ -147,7 +144,7 @@ li {
   border: none;
   outline: none;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
-  padding: 12px 20px;
+  padding: 10px 20px;
   border-radius: 10px;
 }
 
@@ -169,8 +166,9 @@ li {
 }
 
 .dropdown .option div:hover {
-  background: #62baea;
+  background: rgb(70, 70, 112);
   color: #fff;
+  opacity: calc(50%);
 }
 
 .dropdown .option div ion-icon {
@@ -179,248 +177,56 @@ li {
   font-size: 1.2em;
 }
 
-.grid {
+.container-grid1 {
   display: grid;
   grid-template-areas:
-    'paragraph paragraph'
-    'button button'
-    'coach communication';
+    'main cytat cytat'
+    'main button button'
+    'main twin1 twin2';
+  grid-template-columns: 50% 25% 25%;
+  height: 30rem;
+}
+
+.zdjęcie-baba {
+  background-image: url(images/zdjęcie-baba.jpg);
+  background-position: center;
+  background-size: contain;
+  background-repeat:no-repeat;
+  grid-area: main;
+}
+
+.cytat {
+  grid-area: cytat;
+  font-family: 'Amatic SC', cursive;
+  margin: 20px auto;
+  font-size: 2.7rem;
+  color: rgb(9, 94, 72);
+}
+
+.twin1 {
+  grid-area: twin1;
+  font-family: 'Open Sans', sans-serif;
+  font-family: 'Open Sans', sans-serif;
+  color: black;
+  margin: auto;
+}
+
+.twin2 {
+  grid-area: twin2;
+  font-family: 'Open Sans', sans-serif;
+  color: black;
+  margin: auto;
 }
 
 .button {
   grid-area: button;
-  height: 38px;
-  width: 127px;
-  border-radius: 20px;
-  background-color: lightcoral;
-  border: none;
-  color: white;
-  font-family: 'Roboto', sans-serif;
-  margin-bottom: 80px;
-}
-
-.button:hover,
-.button:active {
-  height: 45px;
-  width: 140px;
-  transition-duration: 0.5s;
-}
-
-.zdj-grid {
-  display: flex;
-  justify-content: space-between;
-  margin: 20px 100px;
-  background: url(images/zdjęcie.JPG);
-  background-repeat: no-repeat;
-}
-
-.paragraph {
-  margin-top: 32px;
-  color: rgb(104, 104, 104);
-  grid-area: paragraph;
-  height: 20px;
-  margin-bottom: 180px;
-}
-
-.paragraph-mobile {
-  display: none;
-}
-
-.coach {
-  grid-area: coach;
-  margin-right: 41px;
-  background-color: lightsteelblue;
-  padding: 20px;
-}
-
-.communication {
-  grid-area: communication;
-  background-color: lightskyblue;
-  padding: 20px;
-  margin-left: -41px;
-}
-
-.h3 {
-  font-size: 1rem;
-}
-
-.coach-communication {
-  display: flex;
-  font-family: 'Rubik', sans-serif;
-  color: rgb(73, 67, 67);
-  margin-right: 36px;
-}
-
-.topolska {
-  display: flex;
-  margin: 0px 55px;
-}
-
-.wyzwanie {
-  padding: 15px;
-  background-color: rgba(175, 25, 83, 0.575);
-  width: 57%;
-  height: 302px;
-}
-
-.pobierz {
-  font-family: 'Poppins', sans-serif;
-  font-size: 20px;
-  color: white;
-}
-
-.signup {
-  font-family: 'Poppins', sans-serif;
-  font-size: 15px;
-  margin-bottom: 33px;
-  color: white;
-}
-
-#email {
-  padding: 8px;
-  border: 0.5px solid gray;
-}
-
-#fname {
-  padding: 8px;
-  border: 0.5px solid gray;
-}
-
-#submit {
-  padding: 10px 65px;
-  border: 0.5px solid gray;
-  font-family: 'Josefin Sans', sans-serif;
-  font-weight: 700;
-  letter-spacing: 3px;
-}
-.flex {
-  display: flex;
-  align-items: center;
-}
-
-.checkbox-form {
-  margin-bottom: 16px;
-}
-
-#checkbox {
-  width: 16px;
-  height: 16px;
-  border: 1px solid rgb(177, 177, 238);
-}
-.div-consent {
-  width: 100%;
-  margin-left: 8px;
-}
-
-.consent {
-  width: 90%;
-  color: white;
-}
-
-.hamburger-item {
-  display: none;
-}
-
-.topolska2 {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.topolska2-obramowanie {
-  padding: 20px;
-  background-color: rgb(190, 165, 165);
-  margin: 30px 0;
-}
-.find-more {
-  margin-top: 40px;
-  font-family: 'Mansalva', cursive;
-  font-size: 50px;
-  color: rgb(65, 61, 61);
-}
-
-.images {
-  display: flex;
-  flex-direction: row;
-  align-content: space-evenly;
-  justify-content: space-evenly;
-  width: 100%;
-  height: 50vh;
-}
-
-.image1 {
-  display: flex;
-  background-image: url('images/image1.jpg');
-  height: 100%;
-  width: 20%;
-  background-size: cover;
-  background-position: 58% 0;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
-    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
-    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-}
-
-.image2 {
-  display: flex;
-  background-image: url('images/image2.jpg');
-  height: 100%;
-  width: 20%;
-  background-size: cover;
-  background-position: center;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
-    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
-    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-}
-
-.image3 {
-  display: flex;
-  background-image: url('images/image3.jpg');
-  height: 100%;
-  width: 20%;
-  background-size: cover;
-  background-position: 70% 0;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
-    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
-    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-}
-
-.opisy {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.eps {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 30vw;
-  padding: 35px;
-  vertical-align: bottom;
-}
-
-.mansalva {
-  font-family: 'Mansalva', cursive;
-  font-size: 50px;
-  color: rgb(65, 61, 61);
-  color: white;
-}
-
-.learn {
-  margin-top: -17px;
-  color: white;
-}
-
-.blog {
-  margin-top: -20px;
-  color: white;
-}
-
-.podpis {
-  font-family: 'Rubik', sans-serif;
-  color: rgb(73, 67, 67);
+  margin: 20px auto;
+  padding: 12px 16px;
+    border-radius: 21px;
+    background-color: salmon;
+    color: white;
+    font-family: Arial;
+    font-size: 18px;
 }
 
 .footer {
@@ -436,132 +242,4 @@ footer li {
   display: flex;
   font-weight: 700;
   color: rgb(49, 49, 49);
-}
-
-@media (max-width: 750px) {
-  .mobile-logo {
-    display: flex;
-    flex-direction: column;
-    padding: 1.5px 36px;
-  }
-
-  .navbar {
-    width: 100%;
-  }
-
-  .hamburger-item {
-    display: inline-block;
-    width: 20px;
-    height: 3px;
-    background-color: pink;
-    margin: 2px 0;
-  }
-
-  .buttons {
-    display: none;
-  }
-
-  .logo {
-    display: flex;
-  }
-
-  .logo-anchor-tag {
-    font-size: 1.3rem;
-  }
-
-  .zdj-grid {
-    background-size: contain;
-    justify-content: center;
-    margin: 20px 50px;
-  }
-
-  .paragraph {
-    display: flex;
-    margin-top: 177px;
-    margin-bottom: 136px;
-    margin-left: 23px;
-    color: rgb(104, 104, 104);
-    font-size: small;
-  }
-
-  .grid {
-    display: flex;
-    flex-direction: column;
-    margin-top: 200px;
-  }
-
-  .button {
-    margin: 30px auto;
-  }
-
-  .coach-communication {
-    flex-direction: column;
-    width: 360px;
-    margin-top: 18px;
-    display: flex;
-    align-items: center;
-  }
-
-  .coach {
-    width: 360px;
-    text-align: center;
-    padding: 0;
-    margin-right: 0;
-  }
-
-  .communication {
-    width: 360px;
-    text-align: center;
-    margin-left: 0;
-    padding: 0;
-    margin-right: 0;
-  }
-
-  .topolska {
-    display: flex;
-    flex-direction: column;
-    margin: 0;
-    align-items: center;
-  }
-
-  .wyzwanie {
-    width: 277px;
-    margin-left: 30px;
-    padding-bottom: 66px;
-  }
-
-  .pobierz {
-    margin-top: 8px;
-    font-size: smaller;
-  }
-
-  #email {
-    margin-bottom: 10px;
-  }
-
-  #fname {
-    margin-bottom: 10px;
-  }
-
-  .consent {
-    color: black;
-    margin-top: 67px;
-  }
-
-  #checkbox {
-    margin-bottom: 10px;
-  }
-
-  .consent {
-    font-family: 'Poppins', sans-serif;
-    font-size: small;
-  }
-
-  .img {
-    display: none;
-  }
-
-  .main-page {
-    max-height: 400px;
-  }
 }
