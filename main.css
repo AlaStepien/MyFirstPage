@@ -183,6 +183,7 @@ li {
     'main cytat cytat'
     'main button button'
     'main twin1 twin2';
+    
   grid-template-columns: 50% 25% 25%;
   height: 30rem;
 }
@@ -203,30 +204,34 @@ li {
   color: rgb(9, 94, 72);
 }
 
+
+
 .twin1 {
-  grid-area: twin1;
+  grid-area:twin1;
   font-family: 'Open Sans', sans-serif;
   font-family: 'Open Sans', sans-serif;
   color: black;
-  margin: auto;
+   margin: auto; 
 }
 
 .twin2 {
-  grid-area: twin2;
+  grid-area:twin2;
   font-family: 'Open Sans', sans-serif;
   color: black;
-  margin: auto;
+   margin: auto;
 }
 
-.button {
+#button1 {
   grid-area: button;
-  margin: 20px auto;
+  margin:auto;
   padding: 12px 16px;
     border-radius: 21px;
     background-color: salmon;
     color: white;
     font-family: Arial;
     font-size: 18px;
+    border:none;
+    display:block;
 }
 
 #mybutton {
@@ -238,6 +243,17 @@ li {
     color: white;
     font-family: Arial;
     font-size: 18px;
+    position:absolute;
+    top:50px;
+    left:0;
+    border:none;
+}
+
+.buttonsandother {
+  display:flex;
+  justify-content: center;
+  align-items:center;
+  flex-direction: column;
 }
 
 .footer {
