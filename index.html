@@ -12,6 +12,7 @@
       href="https://fonts.googleapis.com/css2?family=Comforter+Brush&family=Exo+2&family=Kanit:wght@300&display=swap"
       rel="stylesheet"
     />
+    <script src="index.js" defer></script>
   </head>
   <body>
     <div class="navbar">
@@ -47,16 +48,7 @@
       </div>
       <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-<script>
-  function show(anything) {
-    document.querySelector('.textBox').value = anything;
-  }
 
-  let dropdown = document.querySelector('.dropdown');
-  dropdown.onclick = function() {
-    dropdown.classList.toggle('active');
-  }
-</script>
     </div>
     <div class="container-grid1">
       <div class="zdjęcie-baba"></div>
@@ -65,9 +57,11 @@
         <p>"You get what you focus on.<br />Let's focus on what you<br />want."</p>
       </div>
       <div class="button">
-<button>Search more</button>
+        <button id="button1" onclick = "increment()">0</button>
       </div>
-      
+      <div>
+      <button id="mybutton">Click It</button>
+      <div>
       <div class="twin1">
         <p>Integral Coach</p>
         <p>Helping you create a clear vision of<br />what is is you're looking
@@ -87,5 +81,22 @@
     <li>Terms and Conditions</li>
   </ul>
 </footer>
+<script>
+  let button = document.getElementById("button1")
+  let count = 0 
+  function increment() {
+    count = count + 1 
+    button1.innerText = count
+  }
+
+  function show(anything) {
+    document.querySelector('.textBox').value = anything;
+  }
+
+  let dropdown = document.querySelector('.dropdown');
+  dropdown.onclick = function() {
+     dropdown.classList.toggle('active');
+  }
+</script>
   </body>
 </html>
