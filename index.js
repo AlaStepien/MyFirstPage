@@ -1,14 +1,14 @@
-let guzik = document.getElementById("mybutton")
-guzik.addEventListener("click", showTable)
+let guzik = document.getElementById('mybutton');
+guzik.addEventListener('click', showTable);
 
 function showTable() {
-alert("jutro")
+  alert('Always remember to smile!');
 }
-let button = document.getElementById("button1")
-let count = 0 
+let button = document.getElementById('button1');
+let count = 0;
 function increment() {
-  count = count + 1 
-  button1.innerText = count
+  count = count + 1;
+  button1.innerText = count;
 }
 
 function show(anything) {
@@ -16,6 +16,6 @@ function show(anything) {
 }
 
 let dropdown = document.querySelector('.dropdown');
-dropdown.onclick = function() {
-   dropdown.classList.toggle('active');
-}
+dropdown.onclick = function () {
+  dropdown.classList.toggle('active');
+};
